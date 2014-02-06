@@ -113,8 +113,7 @@ if (isset($_POST['process'])) {
 
             $salesResults = DB_query($SQL, $db, $ErrMsg);
             $myrow = DB_fetch_array($salesResults);
-            if (DB_num_rows($salesResults) > 0) {
-                //does exist so is the item then skip
+            if (DB_num_rows($salesResults) > 0) {//does exist so skip
                 continue;
             }
         }//end check
